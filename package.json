@@ -1,34 +1,36 @@
 {
-  "name": "profileviewer",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-  },
+  "name": "profileviewerserverlayer",
+  "version": "1.0.0",
+  "description": "profileviewerserverlayer",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix client",
+    "client": "npm install && cd client && npm install && npm run start",
+    "server": "node index.js",
+    "dev": "concurrently \"npm run client\" \"npm run server\" "
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "react",
+    "express",
+    "material ui"
+  ],
+  "author": "Preeti",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.18.0",
+    "build-url": "1.3.3",
+    "compression": "^1.7.4",
+    "concurrently": "^4.1.0",
+    "connect-redis": "3.4.1",
+    "convict": "^4.4.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-pino-logger": "4.0.0",
+    "express-session": "1.15.6",
+    "helmet": "3.16.0",
+    "path": "^0.12.7",
+    "pino": "5.12.0",
+    "pino-multi-stream": "4.0.2"
   }
 }
